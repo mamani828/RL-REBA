@@ -11,7 +11,7 @@ The scripts included in this repository focus on various aspects of ergonomic op
 
 To give you a better understanding of the scripts' functionality and their impact on ergonomic optimization, we have prepared a video demonstration. This video showcases the inner workings and the practical application of the scripts in a Unity project.
 
-[View the Video Demonstration](https://drive.google.com/file/d/16JTw9Yom61Ieww4oF01k1wJAQRKBiHZc/view?usp=sharing)
+[View the Video Demonstration]([https://drive.google.com/file/d/16JTw9Yom61Ieww4oF01k1wJAQRKBiHZc/view?usp=sharing](https://youtu.be/cczKqe4NbuI))
 
 
 ## Code and Models Availability
