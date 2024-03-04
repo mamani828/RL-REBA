@@ -9,6 +9,9 @@ The opitimization is performed on a humanoid 3D model:
 <p align="center">
   <img src="/Humanoid_Model.png "3D" alt="3D Worker Model" title="3D Worker Model"/>
 </p>
+
+In the images below, you can see the different scores dependning on the location of the box given the kinemtics and joint angles of the humanoid model:
+
 <p align="center">
   <img src="./Score4.png"  width="45%"/>
   <img src="./Score7.png"  width="45%"/>
