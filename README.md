@@ -6,8 +6,10 @@ This repository contains a selection of C# scripts designed for ergonomic optimi
 This repo contains the RL regiment, REBA calculation using joint models and a selection of the Inverse Kinematic controlers.
 The opitimization is performed on a humanoid 3D model:
 
+<p align="center">
+  <img src="/Humanoid_Model.png "3D" alt="3D Worker Model" title="3D Worker Model"/>
+</p>
 
-![3D model](./Humanoid_Model.png "3D Worker Model")
 
 
 ## Video Demonstration
