@@ -9,9 +9,14 @@ The opitimization is performed on a humanoid 3D model:
 <p align="center">
   <img src="/Humanoid_Model.png "3D" alt="3D Worker Model" title="3D Worker Model"/>
 </p>
+<p align="center">
+  <img src="./Score4.png"  width="45%"/>
+  <img src="./Score7.png"  width="45%"/>
+  <img src="./Score5.png"  width="45%"/>
+</p>
 
-
-
+After the ergonomic optimizaiton is complete and the most ideal score has been achieved, the framework saves the relative position into a csv file. From there, this relative position can be used as a reference for the robot to be able to conduct safe object handovers. 
+The advantage of the RL approach and a virtual simulation is that the optimizaiton can be personalized to the worker, task and object since the user can provide the framework the necassary assets. From there the code will be able to optimize dynamically given it's new restraints. 
 ## Video Demonstration
 
 To give you a better understanding of the scripts' functionality and their impact on ergonomic optimization, we have prepared a video demonstration. This video showcases the inner workings and the practical application of the scripts in a Unity project.
