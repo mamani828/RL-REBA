@@ -3,14 +3,17 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class QLearningAgent : MonoBehaviour
-{   private Renderer cubeRenderer;
-    public float epsilon = 0.5f;
-    private int iterations = 0;
-    private float cubeScore = 0.0f;
-    private List<string> csvData = new List<string>();
+{   public float LearningRate = 0.1f;
+    public float DiscountFactor = 0.9f;
+    public float tau = 0.7f;
     public REBACalculator REBACalculator;
     public Transform humanoidLocation;
     public GameObject cube;
+    public float epsilon = 0.5f;
+    private Renderer cubeRenderer;
+    private int iterations = 0;
+    private float cubeScore = 0.0f;
+    private List<string> csvData = new List<string>();
     private int X_SIZE = 0;
     private int Y_SIZE = 0;
     private int Z_SIZE = 0;
@@ -21,10 +24,7 @@ public class QLearningAgent : MonoBehaviour
     private Vector3 optimalPosition;  // Variable to save the optimal cube's position
     private const float extensionX = 0.20f;
     private const float extensionZ = 0.60f; 
-    public float tau = 0.7f; 
     private const float extensionY = 1.2f;
-    public float LearningRate = 0.1f;
-    public float DiscountFactor = 0.9f;
     private float leftBoundary = 0f;
     private float rightBoundary = 0f;
     private float downBoundary = 0f;
