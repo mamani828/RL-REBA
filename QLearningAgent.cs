@@ -9,7 +9,7 @@ public class QLearningAgent : MonoBehaviour
     private float cubeScore = 0.0f;
     private List<string> csvData = new List<string>();
     public REBACalculator REBACalculator;
-    public Transform Guy;
+    public Transform humanoidLocation;
     public GameObject cube;
     private int X_SIZE = 0;
     private int Y_SIZE = 0;
@@ -46,12 +46,12 @@ public class QLearningAgent : MonoBehaviour
 
     private void Start()
     {    
-        leftBoundary = Guy.position.x - extensionX;
-        rightBoundary = Guy.position.x + extensionX;
-        downBoundary = 6*(Guy.position.y + extensionY)/10;
-        upBoundary = Guy.position.y + extensionY*1.2f;
-        inBoundary = Guy.position.z+ ((0.5f)*extensionZ);
-        outBoundary = Guy.position.z + extensionZ;
+        leftBoundary = humanoidLocation.position.x - extensionX;
+        rightBoundary = humanoidLocation.position.x + extensionX;
+        downBoundary = 6*(humanoidLocation.position.y + extensionY)/10;
+        upBoundary = humanoidLocation.position.y + extensionY*1.2f;
+        inBoundary = humanoidLocation.position.z+ ((0.5f)*extensionZ);
+        outBoundary = humanoidLocation.position.z + extensionZ;
         startTime = Time.time;
         // Determine the sizes based on the boundaries
                                     
@@ -94,7 +94,7 @@ public class QLearningAgent : MonoBehaviour
     List<string> lines = new List<string>
     {
         "X,Y,Z",
-        $"{Guy.position.x - position.x:F4},{Guy.position.y-position.y:F4},{Guy.position.z-position.z:F4},{minREBAScore:F4},{Time.time - startTime:F4}"
+        $"{humanoidLocation.position.x - position.x:F4},{humanoidLocation.position.y-position.y:F4},{humanoidLocation.position.z-position.z:F4},{minREBAScore:F4},{Time.time - startTime:F4}"
     };
 
     System.IO.File.WriteAllLines(path, lines.ToArray());
@@ -177,7 +177,7 @@ private IEnumerator QLearningRoutine()
                     cubeRenderer.material.color = Color.blue;
                     yield return new WaitForSeconds(4f); // Wait for 4 seconds
                      float duration = Time.time - startTime;
-                    optimalPosition = (Guy.transform.position - cube.transform.position);
+                    optimalPosition = (humanoidLocation.transform.position - cube.transform.position);
                     shouldContinue = false;
                     CustomLog($"Optimal position found at: ({optimalPosition.x:F4}, {optimalPosition.y:F4}, {optimalPosition.z:F4}). Time taken: {duration:F4} seconds.");
                     cubeRenderer.material.color = Color.green;
@@ -218,10 +218,10 @@ private float ComputeRewardForREBA(float rebaScore)
         cubeScore = -15f; 
     }
 
-    // Compute the absolute difference in x-coordinates between Guy and the cube.
-    float distanceToLeftOfGuy = Guy.position.x - cube.transform.position.x;
-    float distanceToRightOfGuy = cube.transform.position.x - Guy.position.x;
-    float difference = Mathf.Abs(distanceToLeftOfGuy - distanceToRightOfGuy);
+    // Compute the absolute difference in x-coordinates between humanoidLocation and the cube.
+    float distanceToLeftOfhumanoidLocation = humanoidLocation.position.x - cube.transform.position.x;
+    float distanceToRightOfhumanoidLocation = cube.transform.position.x - humanoidLocation.position.x;
+    float difference = Mathf.Abs(distanceToLeftOfhumanoidLocation - distanceToRightOfhumanoidLocation);
 
     const float tolerance = 0.001f;
 
