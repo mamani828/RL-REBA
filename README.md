@@ -1,11 +1,12 @@
 
 # Unity Ergonomic Optimization Scripts
 
-This repository contains a curated selection of C# scripts designed for ergonomic optimization within the Unity game engine. These scripts aim to enhance user interaction and experience through thoughtful ergonomic design, making your Unity projects more intuitive and user-friendly.
-
+This repository contains a selection of C# scripts designed for ergonomic optimization inside the Unity game engine. These scripts aim to optimize for the most ideal object handover location for human robot interaction given ergonomic scores such as REBA utilizing reinforcement learning. The goal is to extend this optimization from a virtual environemnt to real life coordinates in order to guide robot decision making for the most safe human-robot collaboration.
 ## Overview
+This repo contains the RL regiment, REBA calculation using joint models and a selection of the Inverse Kinematic controlers.
+The opitimization is performed on a humanoid 3D model:
+![3D model](./Humanoid_Model.png "3D Worker Model")
 
-The scripts included in this repository focus on various aspects of ergonomic optimization, ensuring a seamless and comfortable user experience. Whether you're developing games or interactive applications in Unity, these scripts serve as a valuable resource for improving the overall quality of your projects.
 
 ## Video Demonstration
 
@@ -21,10 +22,9 @@ All code and models featured in the video and this repository are available upon
 
 ## Requesting Access
 
-To request access to the code, models, or if you have any questions, please contact us. Provide your details and your request, and we'll get back to you as soon as possible.
+To request access to the code, models, or if you have any questions, please contact us.
 
 ## Contact Information
 
 - **Email:** [manipers71@gmail.com](mailto:your.email@example.com)
 
-We look forward to hearing from you and seeing how you incorporate these ergonomic optimizations into your Unity projects!
