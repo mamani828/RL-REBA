@@ -1,8 +1,7 @@
 
 # Unity Ergonomic Optimization Scripts
 
-This repository contains a selection of C# scripts designed for ergonomic optimization inside the Unity game engine presented in the paper [Ergonomic Optimization in Worker-Robot Bimanual
-Object Handover: Circumventing the Discrete Nature of REBA Scores Using Reinforcement Learning in Virtual Reality](https://arxiv.org/abs/2403.12149). 
+This repository contains a selection of C# scripts designed for ergonomic optimization inside the Unity game engine presented in the paper [Intelligent ergonomic optimization in bimanual worker-robot interaction: A Reinforcement Learning approach]([https://arxiv.org/abs/2403.12149](https://www.sciencedirect.com/science/article/pii/S0926580524004771)). 
 
 These scripts aim to optimize for the most ideal object handover location for human robot interaction given ergonomic scores such as REBA utilizing reinforcement learning. The goal is to extend this optimization from a virtual environemnt to real life coordinates in order to guide robot decision making for the most safe human-robot collaboration.
 ## Overview
